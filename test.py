@@ -1,3 +1,4 @@
-from GitData.__init__ import readUser 
-f = readUser('dffjdfjdfj').raw_data()
-print(f)
+from GitData import readUser, parse
+
+user = readUser('dfdfdffd')
+print(parse.username(user))

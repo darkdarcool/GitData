@@ -1,6 +1,10 @@
 import requests
 import json
-class readUser:
+class userNotFoundErr(Exception):
+  pass
+class dictErr(Exception):
+  pass
+class readUser():
   def __init__(self, name: str, s = None):
     self.name = name
     if (s == None):
@@ -12,9 +16,15 @@ class readUser:
     try:
       r['username'] = r.pop('login') # this renames 'login' which is the users username to 'username'
     except:
-      self.r = None
+      raise userNotFoundErr("User not found");
   def raw_data(self):
     return self.r
-  class parse:
-    def e():
-      pass
+class parse:
+    def __init__(self, data):
+      if (type(data) != dict):
+        dictErr("Not a dict")
+      self.r = data
+    def username(self):
+      return self.r['username']
+
+
