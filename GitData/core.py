@@ -19,12 +19,3 @@ class readUser():
       raise userNotFoundErr("User not found");
   def raw_data(self):
     return self.r
-class parse:
-    def __init__(self, data):
-      if (type(data) != dict):
-        dictErr("Not a dict")
-      self.r = data
-    def username(self):
-      return self.r['username']
-
-
