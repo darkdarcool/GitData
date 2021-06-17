@@ -13,7 +13,7 @@ setup(
   author_email = "darkdarcool@gmail.com",
 #To find more licenses or classifiers go to: https://pypi.org/classifiers/
   license = "GNU General Public License v3 (GPLv3)",
-  packages=['GitData'],
+  packages=['GitData', 'GitGrabber'],
   classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
