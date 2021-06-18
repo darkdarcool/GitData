@@ -3,7 +3,7 @@ class dictErr(Exception):
 class parse:
   def __init__(self, data):
     if (type(data) != dict):
-      dictErr("Not a dict")
+      raise dictErr("Not a dict")
     self.r = data
   def raw(self):
     return self.r.raw_data()
